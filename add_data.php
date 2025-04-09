@@ -51,11 +51,11 @@ if ( mysqli_query($conn, $query)) {
           <div class="row m-3">
             <div class="col">
               <label class="form-label">Tanggal</label>
-              <input type="date" class="form-control" name="tanggal">
+              <input type="date" class="form-control" name="tanggal" required>
             </div>
             <div class="col">
               <label class="form-label">Sales</label>
-              <select class="form-select" name="id_sales">
+              <select class="form-select" name="id_sales" required>
                 <option value="" hidden>--Pilih Sales--</option>
                 <?php while ($sales = mysqli_fetch_assoc($salesQuery)) { ?>
                   <option value="<?= $sales['id_sales'] ?>"><?= $sales['nama_sales'] ?></option>
@@ -64,13 +64,13 @@ if ( mysqli_query($conn, $query)) {
             </div>
             <div class="col">
               <label class="form-label">Nama lead</label>
-              <input type="text" class="form-control" name="nama_lead" placeholder="Nama lead">
+              <input type="text" class="form-control" name="nama_lead" placeholder="Nama lead" required>
             </div>
           </div>
           <div class="row m-3">
             <div class="col">
               <label class="form-label">Produk</label>
-              <select class="form-select" name="id_produk">
+              <select class="form-select" name="id_produk" required>
                 <option value="" hidden>--Pilih Produk--</option>
                 <?php while ($produk = mysqli_fetch_assoc($produkQuery)) { ?>
                   <option value="<?= $produk['id_produk'] ?>"><?= $produk['nama_produk'] ?></option>
@@ -79,11 +79,11 @@ if ( mysqli_query($conn, $query)) {
             </div>
             <div class="col">
               <label class="form-label">No. Whatsapp</label>
-              <input type="text" class="form-control" name="no_wa" placeholder="No. Whatsapp">
+              <input type="number" class="form-control" name="no_wa" placeholder="No. Whatsapp" required>
             </div>
             <div class="col">
               <label class="form-label">Kota</label>
-              <input type="text" class="form-control" name="kota" placeholder="Kota">
+              <input type="text" class="form-control" name="kota" placeholder="Kota" required>
             </div>
           </div>
             <div class="card-footer text-center">

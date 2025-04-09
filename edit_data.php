@@ -86,7 +86,7 @@ if ( mysqli_query($conn, $query)) {
             </div>
             <div class="col">
               <label class="form-label">No. Whatsapp</label>
-              <input type="text" class="form-control" name="no_wa" placeholder="No. Whatsapp" value="<?= $lead['no_wa'] ?>" required>
+              <input type="number" class="form-control" name="no_wa" placeholder="No. Whatsapp" value="<?= $lead['no_wa'] ?>" required>
             </div>
             <div class="col">
               <label class="form-label">Kota</label>
